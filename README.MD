@@ -67,18 +67,18 @@ $r1=Run($url,$req_headers,true);
 $coin=explode('<i class="fas fa-coins"></i>',$r1)[1];
 $coin=explode('</div>',$coin)[0];
 ```
-> menampilkan variable $coin hasil explode
-```php
-echo $coin;
-echo "\n";
-```
-> regex untuk mengambil data seperti explode dengan hasil array
+> regex untuk mengambil data seperti explode
 ```php
 preg_match_all('#<div class="AutoACell AAC-success">(.*?)<a#is',$r1,$success);
 ```
 > menghitung banyaknya array dari variable $success
 ```php
 $i = count($success[1])
+```
+> menampilkan variable $coin hasil explode
+```php
+echo $coin;
+echo "\n";
 ```
 > mengulang variable yang ditentukan
 ```php
